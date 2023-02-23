@@ -5,7 +5,7 @@ services:
     container_name: myreactapp
     build:
       context: .
-      dockerfile: dockerfile
+      dockerfile: Dockerfile
     ports:
       - 80:80
     environment:
