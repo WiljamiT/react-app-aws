@@ -1,12 +1,15 @@
-import './App.css';
+
+import Homepage from './pages/HomePage';
+import { CountryProvider } from './context/CountryState';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>Hello</p>
-      </header>
-    </div>
+      <div>
+  
+        <CountryProvider>
+          <Homepage />
+        </CountryProvider>
+      </div>
   );
 }
 

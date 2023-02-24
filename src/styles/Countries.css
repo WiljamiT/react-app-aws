@@ -1,0 +1,25 @@
+/* .container {
+    border: 1px solid black;
+    margin: 2px;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container p {
+    width: 200px;
+}
+
+.li-container {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+.infos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} */
