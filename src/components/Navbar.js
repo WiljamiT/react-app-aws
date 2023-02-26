@@ -1,12 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import '../styles/Navbar.css'
 
 function Navbar() {
   return (
     <nav>
-        <button>- - -</button>
-        <h3>Country</h3>
-        <input type="text" placeholder="Search" />
+        <Link to={"/"}>Home</Link>
+        <h2>Logo</h2>
+        <p>Country App</p>
+        
      </nav>
   )
 }

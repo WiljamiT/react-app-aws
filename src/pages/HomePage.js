@@ -78,22 +78,24 @@ const Homepage = () => {
     return <div>Error: {error.message}</div>;
   }
 
-  console.log(data)
+  // console.log(data)
 
   return (
-    <div>
+    <div className="Home">
       <h1>Countries</h1>
       <TextField label="Search by name" value={searchInput} onChange={handleSearchInputChange} />
       <Button onClick={handleSortByName}>Sort by name</Button>
+      <p>List of countries</p>
       <TableContainer>
         <Table>
         <TableHead>
-             <TableRow>
-               <TableCell>Flag</TableCell>
+             <TableRow style={{ background: "grey" }}>
+               <TableCell style={{ borderRight: "1px solid black" }}>Flag</TableCell>
                <TableCell>Name</TableCell>
                <TableCell>Region</TableCell>
                <TableCell>Population</TableCell>
                <TableCell>Language</TableCell>
+               <TableCell>More</TableCell>
              </TableRow>
            </TableHead>
            <TableBody>

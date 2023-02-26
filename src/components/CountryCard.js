@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+
+import { Link } from "react-router-dom";
 
 import {
   TableCell,
@@ -8,7 +10,7 @@ import {
 export function CountryCard({ country }) {
   return (
     <TableRow>
-        <TableCell><img src={country.flags.png} alt="asdasd" style={{width: "auto", height: "100px", border: "1px solid gray" }}/></TableCell>
+        <TableCell><img src={country.flags.png} alt={country.name.common} style={{width: "200px", height: "120px", border: "1px solid gray", objectFit: "cover" }}/></TableCell>
         <TableCell>{country.name.common}</TableCell>
         <TableCell>{country.continents}</TableCell>
         <TableCell>{country.population.toLocaleString()}</TableCell>
@@ -16,6 +18,7 @@ export function CountryCard({ country }) {
           <li key={key}>{country.languages[key]}</li>
           ))}
         </TableCell>
+        <TableCell><Link to={`/country-details/${country.name.common}`}>More</Link></TableCell>
     </TableRow>
   )
 }
