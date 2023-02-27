@@ -83,12 +83,41 @@ nav a {
 
 
 footer {
-    margin-top: 10px;
     /* background: #362198; */
     background: #00162b;
-    height: 60px;
+    color: #F2F2F2;
 }
 
+.logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: auto;
+    color: gray;
+}
+
+.logos svg {
+    font-size: 2rem;
+    color: #F2F2F2;
+}
+
+.status {
+    margin-top: 25px;
+    text-align: center;
+    padding-bottom: 5px;
+}
+.status a {
+    text-decoration: none;
+    color: #e53f71;
+}
+
+.status a:nth-child(1) {
+    color: #f89f5b;
+}
+.status p {
+    margin: 0;
+    padding: 0;
+}
 .details {
 
     display: flex;
