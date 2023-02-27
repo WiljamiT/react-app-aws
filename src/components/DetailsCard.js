@@ -43,21 +43,23 @@ export function DetailsCard({ country }) {
     <div className="details">
     <Card sx={{ maxWidth: 800, display: "flex", flexDirection: "column", alignItems: "center" }}>
       <CardMedia
-        sx={{ height: 250, width: 360, border: "1px solid gray", marginTop: 1}}
+        sx={{ height: 250, width: 360, border: "1px solid gray", marginTop: 1 }}
         image={country.flags.svg}
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          {country.name.common}
+        <Typography gutterBottom variant="h4" component="div" align="center">
+          {country.name.common} <br />
         </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica {<br />}
-          <b>{country.population.toLocaleString()}</b><br/>
-          <i>{country.continents}</i><br />
-          {country.languages && typeof country.languages === "object" && Object.keys(country.languages).map((key) => (
-          <li key={key}>{country.languages[key]}</li>
-          ))}      
+        <Typography gutterBottom variant="h6" component="div" align="center">
+          {!country.altSpellings[1] ? "-" : country.altSpellings[1]} <br />
+        </Typography>
+        <Typography variant="body2" color="text.secondary" className="infos" align="center">
+          <p>The country is located at {country.subregion} its capital is {country.capital} and area is {country.area} km².</p> {<br />}
+          <li>Population: <b>{country.population.toLocaleString()}</b></li><br/>
+          <li>Contrinents: <b>{country.continents}</b></li><br />
+          <li>Languages: {country.languages && typeof country.languages === "object" && Object.keys(country.languages).map((key) => (
+          <i key={key}>{country.languages[key]}</i>
+          ))}</li>      
         </Typography>
         <LeafletMap country={country} />
       </CardContent>

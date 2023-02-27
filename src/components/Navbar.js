@@ -1,14 +1,16 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
+import { AiOutlineGlobal, AiOutlineHome } from 'react-icons/ai';
 import '../styles/Navbar.css'
 
 function Navbar() {
   return (
-    <nav>
-        <Link to={"/"}>Home</Link>
-        <h2>Logo</h2>
-        <p>Country App</p>
-        
+    <nav> 
+      <div className="logo">
+        <h2><AiOutlineGlobal /></h2>
+      </div>  
+        <i>Country App</i>
+        <Link to={"/"}><AiOutlineHome /></Link>
      </nav>
   )
 }

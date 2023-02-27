@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext, useCallback, useMemo } from 'react';
 import { CountryContext } from '../context/CountryState';
 import { useFetch } from '../hooks/useFetch';
-
 import { CountryCard } from '../components/CountryCard';
 
 import {
@@ -83,19 +82,23 @@ const Homepage = () => {
   return (
     <div className="Home">
       <h1>Countries</h1>
+      
+      <div className="search">
       <TextField label="Search by name" value={searchInput} onChange={handleSearchInputChange} />
-      <Button onClick={handleSortByName}>Sort by name</Button>
-      <p>List of countries</p>
+        
+        
+        <Button onClick={handleSortByName}>Sort by name</Button> 
+      </div>
       <TableContainer>
         <Table>
         <TableHead>
-             <TableRow style={{ background: "grey" }}>
-               <TableCell style={{ borderRight: "1px solid black" }}>Flag</TableCell>
-               <TableCell>Name</TableCell>
-               <TableCell>Region</TableCell>
-               <TableCell>Population</TableCell>
-               <TableCell>Language</TableCell>
-               <TableCell>More</TableCell>
+             <TableRow style={{ background: "#362198" }}>
+               <TableCell style={{ color: "#F2F2F2"}}>Flag</TableCell>
+               <TableCell style={{ color: "#F2F2F2"}}>Name</TableCell>
+               <TableCell style={{ color: "#F2F2F2"}}>Region</TableCell>
+               <TableCell style={{ color: "#F2F2F2"}}>Population</TableCell>
+               <TableCell style={{ color: "#F2F2F2"}}>Language</TableCell>
+               <TableCell style={{ color: "#F2F2F2"}}>More</TableCell>
              </TableRow>
            </TableHead>
            <TableBody>

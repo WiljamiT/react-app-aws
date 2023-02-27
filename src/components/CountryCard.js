@@ -7,6 +7,9 @@ import {
   TableRow
 } from "@mui/material";
 
+
+import { AiOutlineRight } from 'react-icons/ai'
+
 export function CountryCard({ country }) {
   return (
     <TableRow>
@@ -18,7 +21,7 @@ export function CountryCard({ country }) {
           <li key={key}>{country.languages[key]}</li>
           ))}
         </TableCell>
-        <TableCell><Link to={`/country-details/${country.name.common}`}>More</Link></TableCell>
+        <TableCell><Link to={`/country-details/${country.name.common}`}><AiOutlineRight /></Link></TableCell>
     </TableRow>
   )
 }

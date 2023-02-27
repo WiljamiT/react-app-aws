@@ -6,6 +6,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #F2F2F2;
 }
 
 nav {
@@ -13,15 +14,49 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
-    background: #362198;
+    padding: 10px 20px 10px 20px;
+    /* background: #362198; */
+    background: #00162b;
     margin-bottom: 10px;
     color: #F2F2F2;
+    height: 80px;
 } 
+
+nav h2 {
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: spin;
+    animation-duration: 15000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+  /* transform: rotate(3deg); */
+   /* transform: rotate(0.3rad);/ */
+   /* transform: rotate(3grad); */ 
+   /* transform: rotate(.03turn);  */
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
 
 nav a {
     color: #F2F2F2;
     text-decoration: none;
+    font-size: 1.5rem;
 }
 .main-container {
     min-height: 100vh;
@@ -30,9 +65,27 @@ nav a {
     padding: 5px;
 }
 
+.Home h1 {
+    text-align: center;
+}
+
+
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+
+
+
+
 footer {
     margin-top: 10px;
-    background: #362198;
+    /* background: #362198; */
+    background: #00162b;
     height: 60px;
 }
 
@@ -41,6 +94,12 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
+
+    
+}
+
+.infos li {
+    list-style-type: none;
 }
 
 .map {
