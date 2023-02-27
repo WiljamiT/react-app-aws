@@ -58,7 +58,7 @@ export function DetailsCard({ country }) {
           <li>Population: <b>{country.population.toLocaleString()}</b></li><br/>
           <li>Contrinents: <b>{country.continents}</b></li><br />
           <li>Languages: {country.languages && typeof country.languages === "object" && Object.keys(country.languages).map((key) => (
-          <i key={key}>{country.languages[key]}</i>
+          <i key={key}>{country.languages[key]} </i>
           ))}</li>      
         </Typography>
         <LeafletMap country={country} />
