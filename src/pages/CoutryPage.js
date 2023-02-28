@@ -3,7 +3,7 @@ import React from 'react';
 import { useFetch } from '../hooks/useFetch';
 import { useParams } from 'react-router-dom';
 import { DetailsCard } from '../components/DetailsCard';
-
+import { CircularProgress } from "@mui/material";
 
 function CountryPage() {
   const { name } = useParams();
@@ -13,7 +13,11 @@ function CountryPage() {
   );
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
+        <CircularProgress />
+      </div>
+    );
   }
 
   if (error) {

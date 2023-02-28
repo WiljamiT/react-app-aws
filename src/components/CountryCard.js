@@ -21,6 +21,7 @@ export function CountryCard({ country }) {
           <li key={key}>{country.languages[key]}</li>
           ))}
         </TableCell>
+        {/* <TableCell>{Object.values(country.languages)?.join(", ")}</TableCell> */}
         <TableCell><Link to={`/country-details/${country.name.common}`}><AiOutlineRight /></Link></TableCell>
     </TableRow>
   )

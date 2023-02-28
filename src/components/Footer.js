@@ -15,12 +15,12 @@ const Footer = () => {
   return (
     <footer>
       <div className="logos">
-        <AiFillGithub />
+        <a href="https://github.com/WiljamiT/react-app-aws" ><AiFillGithub /></a>
         <p>Wiljami Takkinen | 2023</p>
-        <AiFillLinkedin />
+        <a href="https://www.linkedin.com/in/wiljami-takkinen-9920a2208/"><AiFillLinkedin /></a>
       </div>
       <div className="status">
-        <p>{data.slice(0, 1).map((commit) => (
+        {data.slice(0, 1).map((commit) => (
           <li key={commit.sha}>
           <p>Site updated and built with commit: <a className="commit" href={commit.html_url}>{commit.sha.slice(0, 7)}</a> at: <i className="date">{new Intl.DateTimeFormat("en-GB", {
                   timeZone: "Europe/Helsinki",
@@ -31,7 +31,7 @@ const Footer = () => {
               
               </p>
       </li>
-        ))}</p>
+        ))}
       </div> 
     </footer>
   )
